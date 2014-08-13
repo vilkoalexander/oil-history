@@ -223,13 +223,14 @@ body
 }
 .clouse
 {
-	display: inline-block;
+	
 	height: 20px;
 	width: 60px;
 	border: 1px solid #555;
 	position: absolute;
 	right: 0;
-	z-index: 1;
+	top:0;
+	z-index: 3;
 	
 }
 .clouse:hover{
@@ -245,7 +246,7 @@ body
 {
 	transition-duration: 0.5s;
 	position: fixed;
-	bottom: 50px;
+	bottom: 110px;
 	left: 50px;
 	width: 40px;
 	height: 40px;
@@ -277,4 +278,18 @@ body
 .upper-button a:hover
 {
 	color: rgba(0,0,0,.8);
+}
+
+.footer div
+{
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+	line-height: 86px;
+}
+.footer div a
+{
+	text-decoration: none;
+	color: #fff;
+	text-decoration: underline;
 }
