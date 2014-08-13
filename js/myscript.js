@@ -3,6 +3,8 @@ $(document).ready(function() {
 	$('.decade-wrapper').hide();
 	$('.event').hide();
 
+	//open decade
+
 	$('.round-border').click(function(){
 		var buttonData = $(this).attr('data');
 		$('.decade-wrapper'+'*[data=' + buttonData + ']').slideDown();
@@ -11,12 +13,15 @@ $(document).ready(function() {
 
 	});
 
+	//open .content
+
 	$('.round-border').click(function(){
 		var buttonData = $(this).attr('data');
 		$('.content'+'*[data=' + buttonData + ']').slideDown();
 		$('.wrapper'+'*[data=' + buttonData + ']').fadeOut(100);
 	});
 	
+	//clouse .content
 
 	$('.content').click(function(){
 		$(this).slideUp(500);
@@ -27,6 +32,8 @@ $(document).ready(function() {
 		setTimeout(wrapperShow, 500);
 	});
 
+	// clouse decade
+
 	$('.clouse').click(function(){
 		$(this).parent().slideUp();
 		var buttonData = $(this).attr('data');
@@ -36,7 +43,16 @@ $(document).ready(function() {
 		setTimeout(wrapperShow, 500);
 	});
 
-	
+	//scroll
+
+	$('.nav a').click(function(){
+		elementClick = $(this).attr("href");  //destination attr   
+		destination = $(elementClick).offset().top; //destination 
+		
+		$('html, body').animate( { scrollTop: destination }, 700 );
+		return false; //отменяет действие по умолчанию
+
+	});
 
 
 });

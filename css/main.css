@@ -11,8 +11,21 @@ body
 	height: 100%;
 	width: auto;
 	margin: 0 auto;
+	padding: 0;
 	background-color: #4D1B00;
-	
+	position: relative;
+	overflow: hidden;
+
+}
+
+.header-image
+{
+	height: 400px;
+	width: 100%;
+	background: url(../img/oil-tower.png);
+	left: 0px;
+	bottom: -16px;
+	position: absolute;
 }
 
 .text
@@ -41,7 +54,7 @@ body
 .nav
 {
 	transition-duration: 0.3s;
-	border: 1px solid #fff;
+	border: 1px solid #999;
 	float:right;
 	margin-right: 5%;
 	margin-top: 4%;
@@ -51,6 +64,9 @@ body
 	font-size: 25pt;
 	color:#fff;
 	line-height: 45px;
+	position: absolute;
+	z-index: 1;
+	right: 0;
 	
 }
 
@@ -64,7 +80,7 @@ body
 .nav:hover
 {
 	transition-duration: 0.3s;
-	border: 3px solid #fff;
+	border: 1px solid #fff;
 	
 }
 
@@ -211,11 +227,12 @@ body
 	height: 20px;
 	width: 60px;
 	border: 1px solid #555;
-	
-	margin-left: 1220px;
+	position: absolute;
+	right: 0;
+	z-index: 1;
 	
 }
 .clouse:hover{
-	box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+	box-shadow: 0 0 5px rgba(0,0,0,.5);
 	cursor: pointer;
 }
