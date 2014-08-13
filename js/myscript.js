@@ -51,7 +51,10 @@ $(document).ready(function() {
 		destination = $(elementClick).offset().top; //destination 
 		
 		$('html, body').animate( { scrollTop: destination }, 1100 );
-		$('.upper-button').fadeIn('slow');
+		var upperButtonHide = function(){
+			$('.upper-button').fadeIn('slow');
+		}
+		setTimeout(upperButtonHide, 1200);
 		return false; //отменяет действие по умолчанию
 
 	});
