@@ -236,3 +236,45 @@ body
 	box-shadow: 0 0 5px rgba(0,0,0,.5);
 	cursor: pointer;
 }
+
+.main
+{
+	position: relative;
+}
+.upper-button
+{
+	transition-duration: 0.5s;
+	position: fixed;
+	bottom: 50px;
+	left: 50px;
+	width: 40px;
+	height: 40px;
+	border: 1px solid rgba(4,1,00,.3);
+	
+	text-decoration: none;
+	border-radius: 5px;
+	z-index: 2;
+	text-align: center;
+
+}
+
+.upper-button:hover 
+{
+	transition-duration: 0.5s;
+	box-shadow: 0 0 1px rgba(0,0,0,.5);
+	border: 1px solid rgba(4,1,00,.6);
+
+	
+}
+.upper-button a
+{
+	transition-duration: 0.3s;
+	text-decoration: none;
+	color: rgba(0,0,0,.8);
+	line-height: 36px;
+}
+
+.upper-button a:hover
+{
+	color: rgba(0,0,0,.8);
+}

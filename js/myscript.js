@@ -2,6 +2,7 @@ $(document).ready(function() {
 	$('.content').hide();
 	$('.decade-wrapper').hide();
 	$('.event').hide();
+	$('.upper-button').hide();
 
 	//open decade
 
@@ -43,16 +44,36 @@ $(document).ready(function() {
 		setTimeout(wrapperShow, 500);
 	});
 
-	//scroll
+	//scrollDown
 
 	$('.nav a').click(function(){
 		elementClick = $(this).attr("href");  //destination attr   
 		destination = $(elementClick).offset().top; //destination 
 		
-		$('html, body').animate( { scrollTop: destination }, 700 );
+		$('html, body').animate( { scrollTop: destination }, 1100 );
+		$('.upper-button').fadeIn('slow');
 		return false; //отменяет действие по умолчанию
 
 	});
 
+	//upper button
+    var heightScreen = $(window).height();
+    
+    $(window).scroll(function(){
+    	if(heightScreen < $(document).scrollTop()){
+    		$('.upper-button').fadeIn('slow');
+    	} else if(heightScreen > $(document).scrollTop()) {
+    		$('.upper-button').hide();
+    	}
+	});
 
+	//scrollUp
+
+	$('.upper-button a').click(function(){
+		elementClick = $(this).attr("href");  //destination attr   
+		destination = $(elementClick).offset().top; //destination 
+		
+		$('html, body').animate( { scrollTop: destination }, 1100 );
+		return false; //отменяет действие по умолчанию
+	});
 });
